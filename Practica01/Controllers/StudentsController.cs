@@ -16,19 +16,20 @@ namespace Practica01.Controllers
 
         public IActionResult actu(Estudiantes es)
         {
+
             Estudiante.UpdateStudents(es);
             return RedirectToAction("Index");
 
-           
         }
-        public IActionResult Agregar(Estudiantes es)
+        public IActionResult Guarda(Estudiantes es)
         {
             Estudiante.AddStudents(es);
 
             return Redirect("Index");
         }
-        public IActionResult save()
+        public IActionResult Agregar()
         {
+
             return View();
         }
 
